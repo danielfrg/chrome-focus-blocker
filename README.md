@@ -8,3 +8,4 @@ ridiculous amount of data or are just overly complicated.
 
 This extension simple, OSS, no data collected
 
+![screenshot](static/screenshot.png)
