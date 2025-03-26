@@ -1,11 +1,11 @@
 {
   "name": "Private Focus",
-  "description": "Block websites. No data collected.",
+  "description": "Block websites. Stay focused. No data collected.",
   "version": "1.0",
   "manifest_version": 3,
   "icons": {
-    "16": "static/icon-16x16.png",
-    "32": "static/icon-32x32.png",
+    "16": "static/favicon-16x16.png",
+    "32": "static/favicon-32x32.png",
     "128": "static/logo.png"
   },
   "permissions": [
