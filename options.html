@@ -1,98 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
+
 <head>
   <meta charset="UTF-8" />
   <title>Private Focus Options</title>
   <!-- Tailwind via CDN -->
   <script src="static/tailwind-4.0.10.js"></script>
 </head>
-<body class="bg-gray-100 p-6">
-  <div class="w-[350px] mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+
+<body class="bg-gray-100 dark:bg-gray-900 p-6">
+  <div class="w-[350px] mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
     <!-- Card Header -->
     <div class="p-4">
-      <h1 class="text-xl font-bold text-center">Website Blocker</h1>
+      <h1 class="text-xl font-bold text-center text-gray-900 dark:text-white">Private Focus</h1>
     </div>
 
     <!-- Form -->
     <form id="blockerForm">
       <div class="p-4 space-y-4">
 
-      <!-- Enabled switch -->
-      <div class="flex items-center space-x-2">
-          <input type="checkbox" id="enabled" class="form-checkbox" checked>
-          <label for="enabled" class="text-sm text-gray-700">Enable Blocking</label>
+        <!-- Enabled switch -->
+        <div class="flex items-center space-x-2">
+          <input type="checkbox" id="enabled" class="form-checkbox dark:bg-gray-700 dark:border-gray-600" checked>
+          <label for="enabled" class="text-sm text-gray-700 dark:text-gray-300">Enable Blocking</label>
         </div>
       </div>
 
       <div class="p-4 space-y-4">
         <!-- Websites Input -->
         <div class="space-y-2">
-          <label for="websites" class="block text-sm font-medium text-gray-700">List of websites to block</label>
-          <textarea
-            id="websites"
-            placeholder="Enter one website per line (e.g., facebook.com)"
-            class="w-full border rounded p-2 min-h-[100px] focus:outline-none focus:ring focus:border-blue-300"
-          ></textarea>
+          <label for="websites" class="block text-sm font-medium text-gray-700 dark:text-gray-300">List of websites to
+            block</label>
+          <textarea id="websites" placeholder="Enter one website per line (e.g., facebook.com)"
+            class="w-full border rounded p-2 min-h-[100px] focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white"></textarea>
         </div>
         <!-- Blocking Schedule -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700">Blocking Schedule</label>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Blocking Schedule</label>
           <div class="flex items-center gap-2">
             <!-- Start Time -->
             <div class="flex-1">
-              <label for="startTime" class="block text-xs text-gray-600 my-1">Start Time</label>
+              <label for="startTime" class="block text-xs text-gray-600 dark:text-gray-400 my-1">Start Time</label>
               <div class="flex items-center gap-2">
-                <input type="time" id="startTime" value="09:00" class="w-full border rounded p-1 focus:outline-none focus:ring focus:border-blue-300" required>
+                <input type="time" id="startTime" value="09:00"
+                  class="w-full border rounded p-1 focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  required>
               </div>
             </div>
             <!-- End Time -->
             <div class="flex-1">
-              <label for="endTime" class="block text-xs text-gray-600 my-1">End Time</label>
+              <label for="endTime" class="block text-xs text-gray-600 dark:text-gray-400 my-1">End Time</label>
               <div class="flex items-center gap-2">
-                <input type="time" id="endTime" value="19:00" class="w-full border rounded p-1 focus:outline-none focus:ring focus:border-blue-300" required>
+                <input type="time" id="endTime" value="19:00"
+                  class="w-full border rounded p-1 focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                  required>
               </div>
             </div>
           </div>
         </div>
         <!-- Active Days -->
         <div class="space-y-2">
-          <label class="block text-sm font-medium text-gray-700">Active Days</label>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Active Days</label>
           <div class="grid grid-cols-7 gap-2">
             <!-- Each day checkbox -->
             <div class="flex flex-col items-center">
-              <input type="checkbox" id="monday" checked class="form-checkbox">
-              <label for="monday" class="text-xs capitalize">Mon</label>
+              <input type="checkbox" id="monday" checked class="form-checkbox dark:bg-gray-700 dark:border-gray-600">
+              <label for="monday" class="text-xs capitalize text-gray-700 dark:text-gray-300">Mon</label>
             </div>
             <div class="flex flex-col items-center">
-              <input type="checkbox" id="tuesday" checked class="form-checkbox">
-              <label for="tuesday" class="text-xs capitalize">Tue</label>
+              <input type="checkbox" id="tuesday" checked class="form-checkbox dark:bg-gray-700 dark:border-gray-600">
+              <label for="tuesday" class="text-xs capitalize text-gray-700 dark:text-gray-300">Tue</label>
             </div>
             <div class="flex flex-col items-center">
-              <input type="checkbox" id="wednesday" checked class="form-checkbox">
-              <label for="wednesday" class="text-xs capitalize">Wed</label>
+              <input type="checkbox" id="wednesday" checked class="form-checkbox dark:bg-gray-700 dark:border-gray-600">
+              <label for="wednesday" class="text-xs capitalize text-gray-700 dark:text-gray-300">Wed</label>
             </div>
             <div class="flex flex-col items-center">
-              <input type="checkbox" id="thursday" checked class="form-checkbox">
-              <label for="thursday" class="text-xs capitalize">Thu</label>
+              <input type="checkbox" id="thursday" checked class="form-checkbox dark:bg-gray-700 dark:border-gray-600">
+              <label for="thursday" class="text-xs capitalize text-gray-700 dark:text-gray-300">Thu</label>
             </div>
             <div class="flex flex-col items-center">
-              <input type="checkbox" id="friday" checked class="form-checkbox">
-              <label for="friday" class="text-xs capitalize">Fri</label>
+              <input type="checkbox" id="friday" checked class="form-checkbox dark:bg-gray-700 dark:border-gray-600">
+              <label for="friday" class="text-xs capitalize text-gray-700 dark:text-gray-300">Fri</label>
             </div>
             <div class="flex flex-col items-center">
-              <input type="checkbox" id="saturday" checked class="form-checkbox">
-              <label for="saturday" class="text-xs capitalize">Sat</label>
+              <input type="checkbox" id="saturday" checked class="form-checkbox dark:bg-gray-700 dark:border-gray-600">
+              <label for="saturday" class="text-xs capitalize text-gray-700 dark:text-gray-300">Sat</label>
             </div>
             <div class="flex flex-col items-center">
-              <input type="checkbox" id="sunday" checked class="form-checkbox">
-              <label for="sunday" class="text-xs capitalize">Sun</label>
+              <input type="checkbox" id="sunday" checked class="form-checkbox dark:bg-gray-700 dark:border-gray-600">
+              <label for="sunday" class="text-xs capitalize text-gray-700 dark:text-gray-300">Sun</label>
             </div>
           </div>
         </div>
       </div>
       <!-- Card Footer -->
       <div class="p-4">
-        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring">
+        <button type="submit"
+          class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring">
           Save Settings
         </button>
       </div>
@@ -101,5 +106,5 @@
 
   <script src="options.js"></script>
 </body>
-</html>
 
+</html>
