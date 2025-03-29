@@ -1,8 +1,8 @@
 {
-  "name": "Private Focus",
-  "description": "Block websites. Stay focused. No data collected.",
-  "version": "1.0",
   "manifest_version": 3,
+  "name": "Focus Blocker",
+  "description": "Block websites. Stay focused. No data collected and Open Source",
+  "version": "1.1",
   "icons": {
     "16": "static/favicon-16x16.png",
     "32": "static/favicon-32x32.png",
@@ -13,19 +13,18 @@
       "declarativeNetRequest",
       "alarms"
   ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": "static/logo.png"
-  },
-  "options_ui": {
-    "page": "options.html",
-    "open_in_tab": true
-  },
-  "options_page": "options.html",
   "host_permissions": [
     "<all_urls>"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/background.js"
+  },
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": "static/logo.png"
+  },
+  "options_ui": {
+    "page": "src/options.html",
+    "open_in_tab": true
   }
 }
